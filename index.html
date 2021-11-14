@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mywebsite</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <style>
+        * {
+        margin: 0;
+        padding: 0;
+        font-family: "Open Sans", sans-serif;
+        box-sizing: border-box;
+       }
+        
+       #About{
+           height: 120vh;
+       }
+       #About h2{
+           margin-top: 790px;
+           margin-left: 700px;
+           color:var(--bs-body-color);
+           font-family: "Open Sans", sans-serif;
+           font-size: 30px;
+           font-weight: 900;
+       }
+       #About img{
+           height: 80px;
+           width: 85px;
+
+       }
+        #Hobbies{
+            height: 100vh;
+            background-color:white;
+            justify-content: center;
+            display: flex;
+            flex-direction: row;
+        }
+        
+        #Myskills{
+            height: 100vh;
+            background-color:skyblue;
+            justify-content: center;
+            display: flex;
+            flex-direction: row;
+        }
+        #MyQualification{
+            height: 100vh;
+            background-color:whitesmoke;
+            justify-content: center;
+            display: flex;
+            flex-direction: row;
+        }
+       
+
+        
+        .html{
+            scroll-behavior: smooth;
+        }
+        #Navbar{
+            font-size: 20px;
+            font-weight: bold;
+            justify-content: center;
+            text-align: center;
+            margin-bottom: -10px;
+           
+            
+        }
+        #Navbar img{
+            height: 80px;
+            margin-top: -10px;
+            margin-bottom: -10px;
+            margin-right: 10px;
+
+
+        }
+        #Navbar ul li:hover{
+            background-color:white;
+            
+            border-radius: 12px;
+            
+
+        }
+        #Navbar ul{
+            margin-bottom: -40px;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            background:linear-gradient(45,grey,white);
+        }
+        #Navbar ul li{
+            
+            padding: 10px 10px;
+        }
+        
+        #Navbar ul li a:hover{
+            background-color: white;
+            border-radius: 12px;
+            border-bottom: 4px solid black;
+            border-left: 2px solid black;
+            border-right: 2px solid black;          
+           
+
+        }
+
+        .about-section {
+            background: url(/img/about.png)  no-repeat left;
+            background-size: 55%;
+            overflow: hidden;
+            padding: 100px 0;
+        }
+
+        .inner-container {
+            width: 55%;
+            float: right;
+            background-color: #fdfdfd;
+            padding: 150px;
+        }
+
+        .inner-container h1 {
+            margin-bottom: 30px;
+            font-size: 30px;
+            font-weight: 900;
+        }
+
+        .text {
+            font-size: 14px;
+            color: #494949;
+            
+            text-align: justify;
+            margin-bottom: 40px;
+        }
+
+        .skills {
+            display: flex;
+            justify-content: space-between;
+            font-weight: 700;
+            font-size: 13px;
+        }
+
+        @media screen and (max-width:1200px) {
+            .inner-container {
+                padding: 80px;
+            }
+        }
+
+        @media screen and (max-width:1000px) {
+            .about-section {
+                background-size: 100%;
+                padding: 0px 0;
+            }
+
+            .inner-container {
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width:600px) {
+            .about-section {
+                padding: 20px;
+            }
+
+            .inner-container {
+                padding: 60px;
+            }
+        }
+        .card {
+       
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+        height: 400px;
+        width: 350px;
+        margin-top: 160px;
+        margin-left: 45px;
+        margin-right: 45px;
+        background-color:wheat;
+       
+        }
+
+        
+        .card:hover {
+        box-shadow: 8px 8px 16px 8px skyblue;
+        }
+
+        
+        .container {
+        padding: 2px 16px;
+        }
+        .card {
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+        border-radius: 5px; 
+        }
+
+        
+        img {
+        border-radius: 5px 5px 0 0;
+        }
+        .card1 {
+       
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+        height: 400px;
+        width: 350px;
+        margin-top: 160px;
+        margin-left: 45px;
+        margin-right: 45px;
+        background-color:whitesmoke;
+       
+        }
+        
+
+        
+        .card1:hover {
+        box-shadow: 8px 8px 16px 8px rgb(54, 54, 54);
+        height: 450px;
+        width: 400px;
+        
+        
+        }
+
+        
+        .container {
+        padding: 2px 16px;
+        }
+        .card1 {
+        box-shadow: 4px 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+        border-radius: 5px; 
+        }
+
+        
+        img {
+        border-radius: 5px 5px 0 0;
+        }
+        .card2 {
+       
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+        height: 500px;
+        width: 600px;
+        margin-top: 100px;
+        margin-left: 45px;
+        margin-right: 45px;
+        background-color:orange;
+       
+        }
+
+        
+        .card2:hover {
+        box-shadow: 8px 8px 16px 8px orangered;
+        height: 550px;
+        width: 650px;
+        
+        
+        
+        }
+
+        
+        .container {
+        padding: 2px 16px;
+        }
+        .card2 {
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+        border-radius: 5px; 
+        }
+
+        
+        img {
+        border-radius: 5px 5px 0 0;
+       
+        }
+        .foot{
+            background-color: black;
+            color: white;
+            text-align: center;
+            align-items: center;
+            margin-bottom: -20px;
+        }
+
+        .card {
+  animation: wiggle 3s linear infinite;
+}
+
+/* Keyframes */
+@keyframes wiggle {
+  0%, 7% {
+    transform: rotateZ(0);
+  }
+  15% {
+    transform: rotateZ(-15deg);
+  }
+  20% {
+    transform: rotateZ(10deg);
+  }
+  25% {
+    transform: rotateZ(-10deg);
+  }
+  30% {
+    transform: rotateZ(6deg);
+  }
+  35% {
+    transform: rotateZ(-4deg);
+  }
+  40%, 100% {
+    transform: rotateZ(0);
+  }
+}
+
+/* body {
+  background: #000;
+} */
+
+.card {
+  
+  
+  background: #444;
+  background: linear-gradient(top, #555, #333);
+  border: none;
+  border-top: 3px solid orange;
+  border-radius: 0 0 0.2em 0.2em;
+  color: #fff;
+  font-family: Helvetica, Arial, Sans-serif;
+  font-size: 1em;
+  transform-origin: 50% 5em;
+}
+      
+        
+        
+    </style>
+</head>
+<body>
+    <section id="Navbar">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-4 mb-lg-0">
+                    <img src="/img/logo.png" alt="Error Loading Images">
+                
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">About Me</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="#Hobbies">Hobbies</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    My Strong Points
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#Myskills">Skills And Achievments</a></li>
+                    <li><a class="dropdown-item" href="#MyQualification">My Qualification</a></li>
+                    
+                    </ul>
+                </li>
+                </ul>
+                
+                
+            </div>
+            </div>
+        </nav>
+    </section>
+    
+    <section id="About">
+        <div class="about-section">
+            <div class="inner-container">
+                <h1>Myself</h1>
+                <img src="/img/photo.png" alt="">
+                <p class="text">
+                    Hello ,This is Ganesh Natha Bhise I am a Passionate Programmer Pursuing My B.E(Bachelor Of Engineering)At Pimpri Chinchwad College Of Engineering
+                    Apart From My Study I Love to Play Cricket And Learn New Things .
+                    I am Living In India,Maharashtra,Pune,Pimpri.
+                </p>
+                <div class="skills">
+                    <span>
+                        <p>9767626634</p>
+                        <p>Contact No:</p>
+                    </span>
+                    <span>
+                        <p>ganeshbhise0205@gmail.com</p>
+                        <p>&#8205;&#8205; &#8205;&#8205; &#8205;&#8205; &#8205; &#8205; &#8205; &#8205; &#8205; &#8205; &#8205; &#8205;   Email Address:</p>
+                    </span>
+                    <span>
+                        <p>G.N.Bhise</p>
+                        <p>Signature</p>
+                    </span>
+                </div>
+                <hr>
+                
+            </div>
+            <h2>Hobbies</h2>
+            
+        </div>
+    </section>
+
+            
+    <section id="Hobbies">
+        
+        <div class="card">
+            <img src="/img/hobby2.png" alt="Avatar" style="width:100%">
+            <div class="container">
+                <h4><b>Programming</b></h4>
+                <p>~I am very much attached and comfortable with coding ,and love to code</p>
+                <p>~I have practice programming everyday as my interest increases day-by-day</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="/img/hobby1.png" alt="Avatar" style="width:100%">
+            <div class="container">
+              <h4><b>Cricket</b></h4>
+              <p>~I am Very Much Addicted to cricket sport and love playing cricket</p>
+              <p>~Virat Kohli is my favourite cricketer</p>
+            </div>
+          </div>
+        <div class="card">
+            <img src="/img/hobby3.png" alt="Avatar" style="width:100%">
+            <div class="container">
+              <h4><b>Travelling And Exploring</b></h4>
+              <p>~I love to to travel And Visit new Places</p>
+              <p>~I have visisted So many places in maharashtra till date</p>
+              <p>~Exploring the places makes me happy</p>
+            </div>
+          </div>
+        <img src="" alt="">
+    </section>
+    <section id="Myskills">
+        <div class="card1">
+            <img src="/img/skill1.png" alt="Avatar" style="width:100%">
+            <div class="container">
+              <h4><b>Web Development</b></h4>
+              <p>~I have conceptual knowledge of web Development And i had done enough basic Websites till date.</p>
+              <p>~Recently I had created working Gym Website.</p>
+            </div>
+          </div>
+          <div class="card1">
+            <img src="/img/skill2.png" alt="Avatar" style="width:100%">
+            <div class="container">
+              <h4><b>Programming</b></h4>
+              <p>~I Am Easy with problem solving skills in programming and till date i have learned lot many prgramming languages.</p>
+              <p>~In today`s Modern era of IT world everybody must know the programming.</p>
+            </div>
+          </div>
+          <div class="card1">
+            <img src="/img/skill3.png" alt="Avatar" style="width:100%">
+            <div class="container">
+              <h4><b>App Development</b></h4>
+              <p>~Recently I Was Doing internship in App Development Field, I have been working under design and Architecture team whereas i had made little bit of contrubution in development team.</p>
+            </div>
+          </div>
+          <div class="card1">
+            <img src="/img/skill4.png" alt="Avatar" style="width:100%">
+            <div class="container">
+              <h4><b>Copyright</b></h4>
+              <p>~I along with my teammates were applied for copyright of sports management website</p>
+              <p>~Earlier I have received my website synopsis copyright grant</p>
+            </div>
+          </div>
+        </section>
+          
+          
+        <section id="MyQualification">
+            
+            <div class="card2">
+            <img src="/img/Qualification.png" alt="Avatar" style="width:100%">
+            <div class="container">
+                <h4><b>Qualification</b></h4>
+                <p>~ I am Hsc passed Student Currently Pursuing Bachelor Of Enginnering(B.E) Degree At Pccoe college,Pimpri With Information Technology Branch(IT). </p>
+                <p>~ I have done many programming courses on coursera platform and currently studying in Third year.</p>
+                <p>~ I was part of web development internship last week which i had completed succesfully.</p>
+            </div>
+            </div>
+        </section>
+        <footer class="foot">
+            <p>Copyright &copy; MyWebsite | 2021 | Ganesh Bhise-DIGIBROS&#129304;</p>
+        </footer>
+     
+</body>
+</html>
+         
+           
+            
+           
+        
+
+
+
+
+                    
+                    
+            
+        
+        
